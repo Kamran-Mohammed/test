@@ -65,8 +65,8 @@ jobs:
           git config --local user.name "github-actions[bot]"
           auto-docs deploy
           git checkout gh-pages
-          git add .
-          git commit -a -m "deploy"
+      #     git add .
+      #     git commit -a -m "deploy"
 
       - name: Push changes
         uses: ad-m/github-push-action@master

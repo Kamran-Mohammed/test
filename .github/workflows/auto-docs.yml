@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       contents: write
       issues: read
@@ -26,7 +26,6 @@ jobs:
         run: sudo npm install -g git+https://github.com/zaidmohammed26/auto-api-docs.git
 
       - name: Generate OpenAPI spec
-        uses: actions-js/push@docs-br
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

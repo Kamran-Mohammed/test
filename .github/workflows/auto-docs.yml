@@ -1,4 +1,3 @@
-
 name: AutoDocs CI
 on:
   push:
@@ -30,6 +29,8 @@ jobs:
         run: auto-docs generate
 
       - name: Generate documentation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: auto-docs docs
 
       - name: Deploy documentation

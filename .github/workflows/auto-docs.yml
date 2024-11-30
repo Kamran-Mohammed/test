@@ -35,7 +35,7 @@ jobs:
           git commit -a -m "generate"
 
       - name: Push changes
-        uses: ad-m/github-push-action@docs-br
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.docs-br }}

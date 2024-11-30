@@ -1,3 +1,62 @@
+# name: AutoDocs CI
+# on:
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: write
+#       issues: read
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: "16"
+
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Install auto-docs globally from GitHub repository
+#         run: sudo npm install -g git+https://github.com/zaidmohammed26/auto-api-docs.git
+
+#       - name: Generate OpenAPI spec
+#         run: auto-docs generate
+
+#       - name: Generate documentation
+#         run: auto-docs docs
+
+#       # - name: Deploy documentation
+#       #   env:
+#       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       #   run: auto-docs deploy
+#       - name: Deploy documentation
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           git config user.name "GitHub Actions Bot"
+#           git config user.email "actions@github.com"
+
+#           # Create or switch to the gh-pages branch
+#           git fetch origin gh-pages || echo "gh-pages branch does not exist. It will be created."
+#           git checkout gh-pages || git checkout --orphan gh-pages
+
+#           # Clean the branch and add the generated docs
+#           git reset --hard
+#           git clean -fd
+#           cp -r docs/* .
+#           rm -rf docs
+
+#           # Commit and push the changes
+#           git add .
+#           git commit -m "Deploy documentation to GitHub Pages" || echo "No changes to commit"
+#           git push origin gh-pages --force
+
 name: AutoDocs CI
 on:
   push:
@@ -31,28 +90,7 @@ jobs:
       - name: Generate documentation
         run: auto-docs docs
 
-      # - name: Deploy documentation
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   run: auto-docs deploy
       - name: Deploy documentation
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
-
-          # Create or switch to the gh-pages branch
-          git fetch origin gh-pages || echo "gh-pages branch does not exist. It will be created."
-          git checkout gh-pages || git checkout --orphan gh-pages
-
-          # Clean the branch and add the generated docs
-          git reset --hard
-          git clean -fd
-          cp -r docs/* .
-          rm -rf docs
-
-          # Commit and push the changes
-          git add .
-          git commit -m "Deploy documentation to GitHub Pages" || echo "No changes to commit"
-          git push origin gh-pages --force
+        run: auto-docs deploy

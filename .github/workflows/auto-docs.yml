@@ -1,4 +1,3 @@
-
 name: AutoDocs CI
 on:
   push:
@@ -27,13 +26,16 @@ jobs:
         run: sudo npm install -g git+https://github.com/zaidmohammed26/auto-api-docs.git
 
       - name: Generate OpenAPI spec
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: auto-docs generate
 
       - name: Generate documentation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: auto-docs docs
 
       - name: Deploy documentation
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: auto-docs deploy
-

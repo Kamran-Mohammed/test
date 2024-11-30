@@ -37,7 +37,7 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ steps.generate_token.outputs.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate documentation
         env:

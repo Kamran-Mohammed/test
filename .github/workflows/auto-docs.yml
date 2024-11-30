@@ -28,7 +28,10 @@ jobs:
       - name: Generate OpenAPI spec
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: auto-docs generate
+        run: |
+          auto-docs generate
+          git add -f .
+          git push --force origin docs-br  # Adjust the branch name if necessary
 
       - name: Generate documentation
         env:

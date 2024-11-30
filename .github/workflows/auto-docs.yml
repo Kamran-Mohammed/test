@@ -47,6 +47,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           auto-docs docs
+          git commit -a -m "docs"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
@@ -61,6 +62,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           auto-docs deploy
+          git commit -a -m "deploy"
 
       - name: Push changes
         uses: ad-m/github-push-action@master

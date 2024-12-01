@@ -76,5 +76,21 @@
     },
     "params": {},
     "timestamp": "2024-12-01T05:02:09.619Z"
+  },
+  {
+    "method": "GET",
+    "url": "/pets",
+    "headers": {
+      "user-agent": "PostmanRuntime/7.42.0",
+      "accept": "*/*",
+      "postman-token": "5270551d-e59b-4db9-8a54-87f366f878e6",
+      "host": "127.0.0.1:3000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive"
+    },
+    "query": {},
+    "body": {},
+    "params": {},
+    "timestamp": "2024-12-01T05:17:26.333Z"
   }
 ]

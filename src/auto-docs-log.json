@@ -88,5 +88,78 @@
       "if-none-match": "W/\"a-FY55WIaxoI+DQ5vOisN6QVv/w98\""
     },
     "timestamp": "2024-12-01T02:57:04.534Z"
+  },
+  {
+    "method": "GET",
+    "url": "/pets",
+    "headers": {
+      "user-agent": "PostmanRuntime/7.42.0",
+      "accept": "*/*",
+      "postman-token": "24a3d248-f008-487b-ba33-ac8bff03fb25",
+      "host": "127.0.0.1:3000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive"
+    },
+    "query": {},
+    "body": {},
+    "params": {},
+    "timestamp": "2024-12-01T03:14:57.787Z"
+  },
+  {
+    "method": "POST",
+    "url": "/pets",
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.42.0",
+      "accept": "*/*",
+      "postman-token": "eabd3416-7b4e-4bed-8c2b-f6f3d0803745",
+      "host": "127.0.0.1:3000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "56"
+    },
+    "query": {},
+    "body": {
+      "name": "tommy the dog",
+      "breed": "pitbull"
+    },
+    "params": {},
+    "timestamp": "2024-12-01T04:14:39.075Z"
+  },
+  {
+    "method": "PUT",
+    "url": "/pets/9876niutf896hjg869e",
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.42.0",
+      "accept": "*/*",
+      "postman-token": "9828f658-329e-4105-b586-89868bc2b564",
+      "host": "127.0.0.1:3000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "35"
+    },
+    "query": {},
+    "body": {
+      "breed": "German Shepherd"
+    },
+    "params": {},
+    "timestamp": "2024-12-01T04:16:23.278Z"
+  },
+  {
+    "method": "DELETE",
+    "url": "/pets/9876niutf896hjg869e",
+    "headers": {
+      "user-agent": "PostmanRuntime/7.42.0",
+      "accept": "*/*",
+      "postman-token": "130f8524-9588-4b35-a532-2fa1c317032a",
+      "host": "127.0.0.1:3000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive"
+    },
+    "query": {},
+    "body": {},
+    "params": {},
+    "timestamp": "2024-12-01T04:17:04.441Z"
   }
 ]

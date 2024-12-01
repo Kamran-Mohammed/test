@@ -45,6 +45,7 @@ app.put("/pets/:id", (req, res) => {
     timestamp: new Date().toISOString(),
   });
 });
+
 app.delete("/pets/:id", (req, res) => {
   const { params, headers } = req; // Extract route parameters and headers
 

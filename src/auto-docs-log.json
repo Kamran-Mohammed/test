@@ -19,5 +19,78 @@
       "accept-language": "en-GB,en;q=0.9"
     },
     "timestamp": "2024-12-01T02:52:21.546Z"
+  },
+  {
+    "method": "GET",
+    "url": "/pets",
+    "headers": {
+      "user-agent": "PostmanRuntime/7.42.0",
+      "accept": "*/*",
+      "postman-token": "e7c967db-416d-4830-869a-a1846876f1ba",
+      "host": "127.0.0.1:3000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive"
+    },
+    "query": {},
+    "body": {},
+    "params": {},
+    "timestamp": "2024-12-01T06:56:35.201Z"
+  },
+  {
+    "method": "DELETE",
+    "url": "/pets/9876niutf896hjg869e",
+    "headers": {
+      "user-agent": "PostmanRuntime/7.42.0",
+      "accept": "*/*",
+      "postman-token": "b0d1da4d-5c78-4771-a644-2d6379619b3a",
+      "host": "127.0.0.1:3000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive"
+    },
+    "query": {},
+    "body": {},
+    "params": {},
+    "timestamp": "2024-12-01T06:56:38.011Z"
+  },
+  {
+    "method": "PUT",
+    "url": "/pets/9876niutf896hjg869e",
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.42.0",
+      "accept": "*/*",
+      "postman-token": "2d744c2d-d38c-4243-a950-47b2c83b699a",
+      "host": "127.0.0.1:3000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "35"
+    },
+    "query": {},
+    "body": {
+      "breed": "German Shepherd"
+    },
+    "params": {},
+    "timestamp": "2024-12-01T06:56:42.023Z"
+  },
+  {
+    "method": "POST",
+    "url": "/pets",
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.42.0",
+      "accept": "*/*",
+      "postman-token": "cef2416c-ff6f-483e-8531-9e4631222c2a",
+      "host": "127.0.0.1:3000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "56"
+    },
+    "query": {},
+    "body": {
+      "name": "tommy the dog",
+      "breed": "pitbull"
+    },
+    "params": {},
+    "timestamp": "2024-12-01T06:56:46.785Z"
   }
 ]

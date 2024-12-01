@@ -1,0 +1,235 @@
+openapi: 3.0.0
+info:
+  title: API Documentation
+  version: 1.0.0
+  description: Generated API documentation
+paths:
+  /:
+    get:
+      tags:
+        - Home
+      summary: Handle GET request for /
+      operationId: GET
+      parameters: []
+      requestBody:
+        description: Request body for GET /
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+        required: false
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+        '400':
+          description: Invalid input
+        '404':
+          description: Not Found
+      headers:
+        host: localhost:3000
+        connection: keep-alive
+        sec-ch-ua: '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"'
+        sec-ch-ua-mobile: '?0'
+        sec-ch-ua-platform: '"Windows"'
+        upgrade-insecure-requests: '1'
+        user-agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/131.0.0.0 Safari/537.36
+        accept: >-
+          text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+        sec-fetch-site: none
+        sec-fetch-mode: navigate
+        sec-fetch-user: '?1'
+        sec-fetch-dest: document
+        accept-encoding: gzip, deflate, br, zstd
+        accept-language: en-GB,en;q=0.9
+      timestamp: '2024-12-01T02:52:21.546Z'
+      deprecated: false
+      security: []
+  /pets:
+    get:
+      tags:
+        - pets
+      summary: Handle GET request for /pets
+      operationId: GETpets
+      parameters: []
+      requestBody:
+        description: Request body for GET /pets
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+        required: false
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+        '400':
+          description: Invalid input
+        '404':
+          description: Not Found
+      headers:
+        user-agent: PostmanRuntime/7.42.0
+        accept: '*/*'
+        postman-token: e7c967db-416d-4830-869a-a1846876f1ba
+        host: 127.0.0.1:3000
+        accept-encoding: gzip, deflate, br
+        connection: keep-alive
+      queryParams: {}
+      params: {}
+      timestamp: '2024-12-01T06:56:35.201Z'
+      deprecated: false
+      security: []
+    post:
+      tags:
+        - pets
+      summary: Handle POST request for /pets
+      operationId: POSTpets
+      parameters: []
+      requestBody:
+        description: Request body for POST /pets
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name: tommy the dog
+                breed: pitbull
+        required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+        '400':
+          description: Invalid input
+        '404':
+          description: Not Found
+      headers:
+        content-type: application/json
+        user-agent: PostmanRuntime/7.42.0
+        accept: '*/*'
+        postman-token: cef2416c-ff6f-483e-8531-9e4631222c2a
+        host: 127.0.0.1:3000
+        accept-encoding: gzip, deflate, br
+        connection: keep-alive
+        content-length: '56'
+      queryParams: {}
+      params: {}
+      timestamp: '2024-12-01T06:56:46.785Z'
+      deprecated: false
+      security: []
+  /pets/9876niutf896hjg869e:
+    delete:
+      tags:
+        - pets
+      summary: Handle DELETE request for /pets/9876niutf896hjg869e
+      operationId: DELETEpets9876niutf896hjg869e
+      parameters: []
+      requestBody:
+        description: Request body for DELETE /pets/9876niutf896hjg869e
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+        required: false
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+        '400':
+          description: Invalid input
+        '404':
+          description: Not Found
+      headers:
+        user-agent: PostmanRuntime/7.42.0
+        accept: '*/*'
+        postman-token: b0d1da4d-5c78-4771-a644-2d6379619b3a
+        host: 127.0.0.1:3000
+        accept-encoding: gzip, deflate, br
+        connection: keep-alive
+      queryParams: {}
+      params: {}
+      timestamp: '2024-12-01T06:56:38.011Z'
+      deprecated: false
+      security: []
+    put:
+      tags:
+        - pets
+      summary: Handle PUT request for /pets/9876niutf896hjg869e
+      operationId: PUTpets9876niutf896hjg869e
+      parameters: []
+      requestBody:
+        description: Request body for PUT /pets/9876niutf896hjg869e
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                breed: German Shepherd
+        required: false
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+        '400':
+          description: Invalid input
+        '404':
+          description: Not Found
+      headers:
+        content-type: application/json
+        user-agent: PostmanRuntime/7.42.0
+        accept: '*/*'
+        postman-token: 2d744c2d-d38c-4243-a950-47b2c83b699a
+        host: 127.0.0.1:3000
+        accept-encoding: gzip, deflate, br
+        connection: keep-alive
+        content-length: '35'
+      queryParams: {}
+      params: {}
+      timestamp: '2024-12-01T06:56:42.023Z'
+      deprecated: false
+      security: []
